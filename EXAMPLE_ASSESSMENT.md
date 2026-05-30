@@ -1,17 +1,17 @@
 # Example Assessment Results
 
-This document demonstrates the framework's capabilities through a real assessment of a local test system.
+This document demonstrates the framework's capabilities through an assessment of a sample test system.
 
 ## Assessment Overview
 
-**Target**: http://localhost:9200  
-**Assessment ID**: quick_1780161157  
-**Date**: 2026-05-30 22:42:37 UTC  
+**Target**: https://sample-ai-system.local  
+**Assessment ID**: example_assessment_001  
+**Date**: 2024-01-15 10:30:00 UTC  
 **Duration**: ~7 seconds  
 **Command**: Full reconnaissance with all agents enabled
 
 ```bash
-./assess.sh http://localhost:9200 \
+./assess.sh https://sample-ai-system.local \
   --enable-rag-recon \
   --enable-model-fingerprint \
   --enable-tool-recon \
@@ -186,9 +186,9 @@ Reconnaissance Coverage:
 
 ```
 Observation: Server header exposes implementation details
-Request: GET http://localhost:9200/
+Request: GET https://sample-ai-system.local/
 Response Headers:
-  Server: uvicorn
+  Server: sample-server/1.0
   Content-Type: application/json
 Confidence: 0.95
 Recommendation: Remove or obfuscate server header
@@ -296,4 +296,6 @@ The target system (agent_system with MCP server) was thoroughly analyzed across 
 **Assessment Framework**: AI Agentic Reconnaissance v1.0.0-alpha  
 **Python Version**: 3.9+  
 **Execution Mode**: Full reconnaissance with all agents enabled  
-**Authorization**: Local test system (authorized)
+**Authorization**: Sample test system (authorized)
+
+**Note**: This is a sanitized example for demonstration purposes. All targets, IDs, and specific details have been replaced with generic examples. Real assessments should only be conducted on authorized systems with proper written permission.
